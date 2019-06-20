@@ -1,0 +1,11 @@
+chcp 65001
+
+pyinstaller -F main4.py --hidden-import sklearn.neighbors.typedefs --hidden-import email.mime.message --hidden-import email.mime.image --hidden-import email.mime.multipart --hidden-import email.mime.audio --hidden-import email.mime.text --hidden-import sklearn.neighbors.quad_tree
+pyinstaller -F main4.py --hidden-import sklearn.neighbors.quad_tree --hidden-import sklearn.neighbors.typedefs --hidden-import email.mime.message --hidden-import email.mime.image --hidden-import email.mime.multipart --hidden-import email.mime.audio --hidden-import email.mime.text 
+import sys
+sys.setrecursionlimit(5000)
+
+pyinstaller -F main4.spec
+
+hiddenimports=['sklearn.tree._utils','sklearn.neighbors.typedefs','sklearn.neighbors.ball_tree','sklearn.neighbors.dist_metrics','sklearn.neighbors.quad_tree'],
+hiddenimports=['sklearn.neighbors.quad_tree', 'sklearn.neighbors.typedefs', 'email.mime.message', 'email.mime.image', 'email.mime.multipart', 'email.mime.audio', 'email.mime.text','sklearn.tree._utils','sklearn.neighbors.typedefs','sklearn.neighbors.ball_tree','sklearn.neighbors.dist_metrics','sklearn.neighbors.quad_tree'],
